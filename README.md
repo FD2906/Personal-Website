@@ -4,7 +4,7 @@ Welcome to the repository for my personal website! This project showcases my ski
 
 **🌟 Features**
 
-	•	Resume/CV Section: Professionally styled with key contact details, skills, and a downloadable option.
+	•	Resume/CV Section: Styled with personal details, experiences, and skills.
 	•	Blog: A dynamic blog layout for sharing my thoughts, insights, and experiences.
 	•	Contact Form: A user-friendly form to get in touch with me.
 	•	Visual-Focused Design: Emphasis on aesthetics with clean, modern UI elements.
