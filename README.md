@@ -1,6 +1,6 @@
-**Personal Website Portfolio**
+**Frank Dong - Personal Website**
 
-Welcome to the repository for my personal website portfolio! This project showcases my skills, experiences, and creative projects in an interactive and visually engaging way.
+Welcome to the repository for my personal website! This project showcases my skills, experiences, and creative projects in an interactive and visually engaging way.
 
 **🌟 Features**
 
