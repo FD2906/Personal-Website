@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank Dong - Home</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- importing of main css stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- importing of font awesome -->
+</head>
+
+<body id="top"> <!-- website content, top for go Back to Top -->
+    <header class="fixed-header"> <!-- header will be fixed -->
+        <nav>
+            <ul class="nav-links"> <!-- internal links to other pages -->
+                <li id="home-icon"><a href="index.html">Home</a></li> <!-- specific home icon -->
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- social media icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/frank-dong-6943ab261/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/FD2906" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/frank.d05/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-form">
+            <h1>Contact Me</h1>
+            <p>If you have any questions or just want to reach out, feel free to drop me a message using the form below:</p>
+            
+            <form id="contact-form-inner">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <br>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <br>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                <br>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                <br>
+                
+                <button type="submit" class="submit-button" id="the-submit-button">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>&copy; 2024, Frank Dong</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/frank-dong-6943ab261/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/FD2906" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/frank.d05/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-buttons">
+            <p><a href="references.html" class="button">References</a></p>
+            <p><a href="#top" class="button">Back to Top</a></p>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> <!-- link to emailJS API -->
+<script src="js/contact.js" defer></script> <!-- Link to your external JS -->
+<!-- placed these here to load faster -->
+</body>
+
+</html>

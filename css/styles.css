@@ -1,0 +1,775 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ==================== Font-size anchor for screen sizes ==================== */
+
+html {
+    font-size: 16px; /* Default font size */
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* Even smaller font size for very small screens */
+    }
+}
+
+/* ==================== defining colours used ==================== */
+:root {
+    --primary: #F1F0E8; /* white-grey */
+    --secondary: #333; /* darkgrey-black */
+    --link: #25597D; /* navy blue */
+    --hover: #1E4A69; /* darker navy blue */
+    --active: #DAA682; /* peachy red */
+}
+
+
+/* ==================== Fixed header styling ==================== */
+.fixed-header {
+    position: fixed; /* Keeps the header at the top */
+    z-index: 1000; /* Ensures the header stays on top */
+    top: 0; 
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* slight shadow */
+    height: 6rem; /* header height */
+    width: 100%; /* Full width of page */
+    background-color: var(--secondary); /* dark grey header background */
+}
+
+/* Navigation bar container */
+.fixed-header nav {
+    display: flex;
+    justify-content: space-between; /* Space between nav links and icons */
+    align-items: center; /* Center items vertically */
+    margin: 0 9rem;
+    height: 100%; /* ensures nav container takes up entire space of fixed header class. */
+}
+
+/* Navigation links list */
+.nav-links {
+    display: flex; /* Arrange links horizontally */
+    flex-grow: 1; /* ensures nav-links sections grows and takes up available space */
+    justify-content: left; /* positions nav links to the left */
+    list-style: none; /* Remove bullet points */
+    gap: 1rem; /* Space between links */
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Individual navigation link incl. transitions*/
+.nav-links li a {
+    padding: 0.5rem 1rem; /* Add padding around links */
+    font-family: Arial, sans-serif; /* Change this for font family */
+    font-size: 1.25rem; /* Change this for font size */
+    font-weight: 500; /* Adjust weight for typography */
+    color: var(--primary); /* Change this for link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+    border-radius: 0.3125rem; /* Rounded corners for hover effect */
+    color: var(--link) ; /* hover colour */
+    background-color: rgba(255, 255, 255, 0.1); /* light grey background on hover */
+}
+
+.nav-links li a:active {
+    border-radius: 0.3125rem; /* Rounded corners for hover effect */
+    color: var(--active) ; /* active colour */
+    background-color: rgba(255, 255, 255, 0.1); /* light grey background on hover */
+}
+
+/* Social icons container */
+.social-icons {
+    flex-grow: 1; /* ensures social icons grow and takes up available space. */ 
+    justify-content: right; /* move to right of header */ 
+    display: flex;
+    gap: 1rem; /* Space between social icons */
+}
+
+/* Individual social icons */
+.social-icons a {
+    padding: 0.75rem 1rem;
+    color: var(--primary); /* Change this for icon color */
+    font-size: 2rem; /* Adjust size of icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Social icons hover effect */
+.social-icons a:hover {
+    color: var(--link) ; /* hover colour: navy blue */
+}
+
+.social-icons a:active {
+    color: var(--active) ; /* active colour: peachy red */
+}
+
+/* changes to header when screen size under 1024px - mobile */
+@media screen and (max-width: 1024px) {
+    .social-icons {
+      display: none; /* Hide social icons */
+    }
+
+    .nav-links {
+        justify-content: center;
+        width: 100%; /* Ensure it spans the header */
+    }
+
+    .nav-links li a {
+        text-align: center;
+    }
+}
+
+
+
+
+/* ==================== Body and Main ==================== */
+
+/* Universal reset */
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width/height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure html and body fill the viewport */
+html, body {
+    height: 100%; /* Ensure full height */
+    width: 100%; /* Ensure full width */
+    background-color: var(--primary); /* lighter white colour */
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--secondary); 
+    background-color: var(--primary); /* lighter white colour */
+}
+
+main {
+    margin: 8rem 6rem 3rem 6rem; /* 8 rem margin on top, bottom of page to ensure header does not block content. */
+}
+
+/* Headings (for example, h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--secondary);
+    line-height: 1.6;
+}
+
+/* Links styling */
+a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--hover);
+}
+
+a:active {
+    color: var(--active);
+}
+
+/* List styling */
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+
+/* specific layout styles with flexbox */
+
+/* General styling for the two-sections container */
+.two-sections {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    text-align: justify; /* ensures text is justified. */
+    justify-content: space-between; /* Ensure space between text and image */
+    gap: 2rem; /* Add spacing between text and image */
+    padding: 2rem; /* Add some padding for spacing */
+    margin: 0 auto; /* Center content within the page */
+}
+
+.two-sections-inner {
+    flex: 1; /* both sections share equal space */
+    margin: 0 2rem;
+}
+
+.two-sections img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    object-fit: cover;
+}
+
+/* smaller screens, e.g. tablets and mobile */
+
+@media (max-width: 1024px) {
+    main {
+        margin: 8rem 0 0 0; /* only margin at top */
+    }
+
+    .two-sections {
+        text-align: justify; /* Center-align text */
+        text-align-last: center;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .two-sections-inner {
+        max-width: 100%; /* Allow sections to span full width */
+    }
+
+    .two-sections-inner p {
+        margin: 1rem 0; /* add some additional vertical margins to work with, no increase in horizontal */
+    }
+
+    .two-sections-inner img {
+        width: 80%; /* Reduce image size for small screens */
+        margin: 0 auto; /* Center the image */
+        min-width: 16.75rem;
+        min-height: 10rem;
+    }
+
+    /* no horizontal margin on references-article - added here: */
+    #references-article {
+        margin: 0 2rem;
+    }
+}
+
+/* even smaller dimensions, we MUST stop images shrinking */
+@media (max-width: 480px) {
+    img {
+        min-width: 300px;
+        width: auto;
+    }
+}
+
+/* blog - index.html and blog.html collection */
+
+#blog-intro {
+    margin: 0 2rem; /* intro to blog mainpage needed some extra horizontal margin */
+}
+
+.blog-container {
+    display: flex;
+    align-items: stretch; /* stretch to ensure all boxes are the same height */
+    justify-content: space-between;
+    gap: 2rem;  /* Optional, adds spacing between the blog posts */
+    flex-wrap: wrap;  /* Ensures the blog posts wrap on smaller screens */
+    margin-top: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.blog-post {
+    flex: 1;
+    background-color: #f9f9f9;  /* Light background for the blog posts */
+    padding: 1rem;
+    border-radius: 8px;
+    width: 30%;  /* Adjust width to ensure posts are side by side */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post a {
+    display: block;
+    text-decoration: none;
+    color: #000;  /* Ensure text inside links is black */
+}
+
+.blog-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;  /* Make the image scale to the full width of its container */
+    height: 30rem;  /* Maintain the image's aspect ratio */
+    max-width: 100%;  /* Ensure it doesn’t exceed the container's width */
+    object-fit: cover;  /* Optionally, cover the area of the container, cropping if necessary */
+    margin-bottom: 1rem;  /* Optional: space below the image */
+}
+
+.blog-post h3 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.blog-post p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);  /* Slightly lift the box on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow on hover */
+}
+
+.blog-section a {
+    text-decoration: none;
+    color: var(--link);  /* Link color (adjust as needed) */
+}
+
+.blog-section a:hover {
+    color: var(--hover);  /* Darker hover color for links */
+}
+
+
+.container {   
+    margin: 0 2rem; /* individual blog entries needed some extra margin. */
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    margin-bottom: 2rem;
+    width: 50%;
+}
+
+/* smaller screens, e.g. mobile */
+
+@media (max-width: 1024px) {
+    .blog-container {
+        flex-direction: column; /* Stack the blog posts vertically */
+        align-items: center;  /* Center the items horizontally */
+    }
+    
+    .blog-post {
+        flex: 1 1 100%; /* Make each blog post take full width on mobile */
+        max-width: 500px; /* Limit the maximum width to a reasonable size */
+        width: 100%;  /* Ensure full width without causing overflow */
+        margin-bottom: 20px; /* Space between stacked blog posts */
+        padding: 20px; /* Add some padding inside each blog post */
+        box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post img, .blog-image {
+        display: none;
+    }
+}
+
+
+/* resume.html cv heading container */
+.cv-section {
+    padding: 20px;
+    background-color: var(--primary); /* Light background for readability */
+    text-align: center;
+    text-decoration: none;
+}
+
+.cv-container {
+    display: flex;
+    margin-top: 8rem;
+    align-items: center; /* Vertically aligns all items */
+    justify-content: space-between; /* Distributes items evenly */
+    gap: 20px; /* Adds spacing between sections */
+}
+
+#headshot img {
+    width: 150px; /* Set a fixed width for the headshot */
+    height: 150px; /* Maintain a circular aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits properly */
+}
+
+#personal-details {
+    flex: 1; /* Allows the name and profession section to take more space */
+    text-align: center; /* Centers the name and profession text */
+}
+
+#profession {
+    color: grey;
+}
+
+#contacts {
+    flex: 1; /* Balances the space with the personal details section */
+    text-align: right; /* Aligns contact details to the right */
+}
+
+#contacts-list {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#contacts-list li {
+    margin-bottom: 10px; /* Adds spacing between each contact detail */
+    font-size: 14px; /* Adjust font size for readability */
+}
+
+#contacts-list a {
+    color: var(--link); /* Matches the link color */
+    text-decoration: none;
+}
+
+#contacts-list a:hover {
+    text-decoration: underline; /* Adds emphasis on hover */
+}
+
+.cv-section h2 {
+    text-decoration: underline;
+}
+
+.two-section-inner ul, .cv-section ul {
+    list-style-type: none;
+}
+
+figure.two-section-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 1rem 0;
+}
+
+figure.two-section-inner img{
+    margin: 0 0.5rem;
+}
+
+/* media query to fit images nicely, by removing them! */
+@media (max-width: 1480px) {
+    .optional-photos-two {
+        display: none;
+    }
+}
+
+@media (max-width: 1063px) {
+    .optional-photos-one {
+        display: none;
+    }
+}
+
+/* mobile styles for screens under 768px */
+@media (max-width: 768px) {
+    .cv-container {
+        display: flex;
+        flex-direction: column; /* Stack divisions vertically */
+        align-items: center;    /* Center-align content */
+        padding: 20px;          /* Add padding around the container */
+    }
+
+    .three-sections {
+        width: 100%;
+        text-align: center;     /* Center-align text inside sections */
+        margin-bottom: 20px;    /* Add spacing between stacked sections */
+    }
+
+    #headshot img {
+        max-width: 150px; /* Reduce headshot size */
+        height: auto;     /* Maintain aspect ratio */
+        margin: 0 auto;
+    }
+
+    #full-name {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    #profession {
+        font-size: 1.2rem;
+    }
+
+    #contacts {
+        text-align: center;
+    }
+
+    #contacts-list {
+        list-style: none;  /* Remove bullet points */
+        padding: 0;
+    }
+
+    #contacts-list li {
+        font-size: 1rem;   /* Adjust font size for readability */
+        margin-bottom: 10px;
+    }
+
+    #contacts-list a {
+        text-decoration: none; /* Remove underline from links */
+        color: var(--link);        /* Add color for emphasis */
+    }
+
+    #contacts-list a:hover {
+        text-decoration: underline; /* Reintroduce underline on hover */
+    }
+
+    /* Ensure icons are appropriately sized */
+    #contacts-list i {
+        margin-right: 8px;
+        font-size: 1.2rem;
+    }
+
+}
+
+/* code for individual blog pages */
+.blog-container p {
+    text-align: justify;
+}
+
+/* contact.html elements */
+/* General Styling for the Contact Section */
+.contact-form {
+    max-width: 600px; /* Form width on larger screens */
+    margin: 20px auto; /* Center the form with spacing */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Arial', sans-serif; /* Clean font style */
+    box-sizing: border-box; /* Prevent padding from breaking the layout */
+}
+
+/* Section Title and Description */
+.contact-form h1 {
+    text-align: center; /* Center title */
+    color: var(--secondary);
+    font-size: 28px; /* Adjust for visibility */
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Form Fields */
+.contact-form label {
+    display: block; /* Ensure labels take full width */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--secondary);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; /* Inputs fill container width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box; /* Maintain sizing integrity */
+}
+
+/* Inputs on Focus */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.contact-form .submit-button {
+    background-color: var(--link);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Center the button */
+    width: fit-content; /* Button adjusts to text size */
+}
+
+.contact-form .submit-button:hover {
+    background-color: var(--hover);
+}
+
+/* Small Screen Responsiveness */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form h1 {
+        font-size: 24px;
+    }
+
+    .contact-form p {
+        font-size: 14px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form .submit-button {
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Screens (e.g., Mobile Phones) */
+@media screen and (max-width: 480px) {
+    .contact-form {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .contact-form h1 {
+        font-size: 22px;
+    }
+
+    .contact-form p {
+        font-size: 13px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .contact-form .submit-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+/* general button code */
+
+.button {
+    text-decoration: none;
+    color: var(--primary); /* light-beige */
+    background-color: var(--link); /* nicer blue color */
+    padding: 0.75rem 1.5rem; /* Padding for the button */
+    border: 0;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--hover) ; /* even darker blue colour */
+    color: var(--primary);
+}
+
+.button:active {
+    background-color: var(--active); /* peachy red colour for active buttons and links */
+    color: var(--primary)
+}
+
+
+
+/* ==================== footer section ==================== */
+
+/* Footer container */
+.footer {
+    background-color: var(--secondary); /* Dark background */
+    padding: 2rem 1rem 1rem 1rem; /* Padding for spacing inside the footer */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Vertically center content */
+}
+
+footer p {
+    color: var(--primary); /* white text */
+    margin-bottom: 0;
+}
+
+/* Social links container */
+.social-links {
+    display: flex; /* Align icons horizontally */
+    gap: 1rem; /* Space between icons */
+    justify-content: center; /* Center the social links horizontally */
+}
+
+/* Individual social links */
+.social-links a {
+    text-decoration: none; /* Remove underline */
+    color: var(--primary); /* White text for links */
+    font-size: 2rem; /* Larger font size for icons */
+    padding: 0.5rem 0; /* Vertical padding for easier clicking */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+
+
+/* Wrapper for footer buttons */
+.footer-buttons {
+    display: flex;           /* Enable flexbox */
+    flex-direction: row;     /* Align items in a row */
+    gap: 1rem;               /* Space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+/* Footer buttons */
+.footer .button {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary);
+    background-color: var(--primary); /* offwhite button color */
+    padding: 0.75rem 1.5rem; /* Padding for the button */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.footer .button:hover {
+    background-color: var(--link); /* Darker shade on hover */
+}
+
+.footer .button:active {
+    background-color: var(--active) /* active buttons get this colour. */
+}
