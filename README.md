@@ -8,6 +8,7 @@ Welcome to the repository for my personal website portfolio! This project showca
 	•	Blog: A dynamic blog layout for sharing my thoughts, insights, and experiences.
 	•	Contact Form: A user-friendly form to get in touch with me.
 	•	Visual-Focused Design: Emphasis on aesthetics with clean, modern UI elements.
+	•	Responsive Design: Works well on mobile, tablets, and desktops.
 
 **🛠️ Tech Stack**
 
