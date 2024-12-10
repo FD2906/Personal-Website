@@ -742,7 +742,13 @@ footer p {
     transition: color 0.3s ease; /* Smooth hover effect */
 }
 
+.social-links a:hover {
+    color: var(--link);
+}
 
+.social-links a:active {
+    color: var(--active);    
+}
 
 /* Wrapper for footer buttons */
 .footer-buttons {
