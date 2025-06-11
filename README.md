@@ -4,24 +4,24 @@ Welcome to the repository for my personal website! This project showcases my ski
 
 **🌟 Features**
 
-	•	Resume/CV Section: Styled with personal details, experiences, and skills.
-	•	Blog: A dynamic blog layout for sharing my thoughts, insights, and experiences.
-	•	Contact Form: A user-friendly form to get in touch with me.
-	•	Visual-Focused Design: Emphasis on aesthetics with clean, modern UI elements.
-	•	Responsive Design: Works well on mobile, tablets, and desktops.
+•	Resume/CV Section: Styled with personal details, experiences, and skills.
+•	Blog: A dynamic blog layout for sharing my thoughts, insights, and experiences.
+•	Contact Form: A user-friendly form to get in touch with me.
+•	Visual-Focused Design: Emphasis on aesthetics with clean, modern UI elements.
+•	Responsive Design: Works well on mobile, tablets, and desktops.
 
 **🛠️ Tech Stack**
 
 Languages & Frameworks
 
-	•	HTML5 & CSS3: For layout and styling.
-	•	JavaScript: For interactive features and dynamic functionality.
+•	HTML5 & CSS3: For layout and styling.
+•	JavaScript: For interactive features and dynamic functionality.
 
 **Libraries & Tools**
 
-	•	Font Awesome: For icons.
-	•	Google Fonts: For typography.
-	•	EmailJS: For interactive form.
+•	Font Awesome: For icons.
+•	Google Fonts: For typography.
+•	EmailJS: For interactive form.
 
 **🚀 Live Demo**
 
@@ -29,9 +29,9 @@ https://ucl.ac.uk/~zceifjw
 
 **✨ Upcoming Features**
 
-	•	Integration with external services like GitHub and LinkedIn.
-	•	Blog CMS for easier post management.
-	•	Enhanced animations and transitions for UI elements.
+•	Integration with external services like GitHub and LinkedIn.
+•	Blog CMS for easier post management.
+•	Enhanced animations and transitions for UI elements.
 
 **🤝 Contributing**
 
