@@ -45,5 +45,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 Have any questions or suggestions? Feel free to reach out:
 
-	•	Email: frank.dong2906@gmail.com or frank.dong.24@ucl.ac.uk
-	•	GitHub: FD2906
+- Email: frank.dong.24@ucl.ac.uk
+- GitHub: FD2906
